@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: apigateway
-          image: egovframe/egovframe-msa-edu-backend-apigateway:latest # TODO
+          image: overpassion/egovframe-msa-edu-backend-apigateway:latest # TODO
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
