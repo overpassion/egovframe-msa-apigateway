@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: jenkins
   name: apigateway-deployment
   annotations:
     kubernetes.io/change-cause: "Initialized by manifest files."
@@ -27,7 +28,7 @@ spec:
     spec:
       containers:
         - name: apigateway
-          image: overpassion/egovframe-msa-edu-backend-apigateway:latest # TODO
+          image: overpassion/egovframe-msa-backend-apigateway:k8s # TODO
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
